@@ -1,0 +1,57 @@
+/* custom font family */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* apply font family  */
+body {
+  font-family: poppins;
+}
+/* contyainer */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+/* all image size control */
+img {
+  width: 30rem;
+}
+/* div width Control  */
+.with-controlar {
+  width: 50%;
+  line-height: 0.2rem;
+}
+/* right side of hero section */
+.hero-right-section {
+  margin-left: 2rem;
+}
+/* margin-top */
+.mt-3 {
+  margin-top: 3rem;
+}
+/*  */
+hr {
+  width: 50%;
+}
+h1 {
+  font-size: 2rem;
+}
+/* button hover effect and some effective design */
+button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
+button:focus {
+  outline: 2px solid rgb(66, 61, 60);
+}
+/* input field design */
+input {
+  padding: 10px 30px;
+  border: 1px solid rgb(163, 157, 157);
+}
+/* media query for webpage responsive
+ */
+
+@media only screen and (max-width: 668px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}

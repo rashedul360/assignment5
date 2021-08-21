@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>macbook bro</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <div class="">
+            <div class="container">
+             <div>
+                <img src="images/mac.png" alt="" />
+            </div>
+            <div class="hero-right-section">
+                <h1>Customize your blue 24-inch iMAC with apple M1 chip</h1>
+                <p> Trade‑in values will vary based on the condition, year, and configuration of your trade‑in device. You must be at least 18 years old to be eligible to trade in for credit or for an Apple Gift Card. Not all devices are eligible for credit. More details are available from Appleʼs Mac trade‑in partner. </p>
+
+                <div>
+                    <!-- customize Imac memory -->
+                    <h2>Memory</h2>
+                    <button id="configuration-memory">8GB unified memory</button>
+                    <button id="16GB-memory">16GB unified memory</button>
+                </div>
+                <div>
+                    <!-- customize iMAC storage  -->
+                    <h2>storage</h2>
+                    <button id="configuration-storage">256GB SSD storage</button>
+                    <button id="storage-512">512GB SSD storage</button>
+                    <button id="storage-1tb">1TB SSD storage</button>
+                </div>
+                <div>
+                    <!-- delivery Rate -->
+                    <h2>choose your delivery option</h2>
+                    <button id="free-delivery">Friday , Aug 25 free prime delivery </button>
+                    <button id="paid-delivery-cost">Friday , Aug 21 delivery charge $20 </button>
+                </div>
+              
+                <section class="mt-3">
+                    <div class="container with-controlar">
+                        <!-- // iMac original price  -->
+                        <div>
+                            <h3>best price</h3>
+                        </div>
+                        <div>
+                            <h3>$<span>1299</span></h3>
+                        </div>
+                    </div>
+                    <div class="container with-controlar">
+                        <!-- updated memory cost  -->
+                        <div>
+                            <h3>Extra memory cost</h3>
+                        </div>
+                        <div>
+                            <h3>$<span id="extra-memory">0</span></h3>
+                        </div>
+                    </div>
+                    <div class="container with-controlar">
+                        <!-- updated storage cost   -->
+                        <div>
+                            <h3>Extra storage const</h3>
+                        </div>
+                        <div>
+                            <h3>$<span id="extra-storage-cost">0</span></h3>
+                        </div>
+                    </div>
+                    <div class="container with-controlar">
+                        <!-- updated delivery charge  -->
+                        <div>
+                            <h3>Delivery charge</h3>
+                        </div>
+                        <div>
+                            <h3>$<span id="delivery-cost">0</span></h3>
+                        </div>
+                    </div>
+                    <div class="container with-controlar">
+                        <!-- all component total price  -->
+                        <div>
+                            <h2>total price</h2>
+                        </div>
+                        <div>
+                            <h2>$<span id="totalCost">1299</span ></h2>
+                        </div>
+                    </div>
+                   
+                </section>
+                <!-- apply promocode section  -->
+                <section>
+                    <h2>Apply promo code</h2>
+                    <input type="text" name="" id="cupon-field">
+                    <button id="apply">Apply</button>
+                </section>
+            </div>
+            </div>
+    </section>
+        <!-- total const with promoCode apply price -->
+    <section class="mt-3">
+        <hr>
+        <h1 style="text-align: center;">Total: $<span id="promo-total">1299</span></h1>
+    </section>
+
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
