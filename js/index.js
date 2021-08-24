@@ -3,6 +3,17 @@ const extraMemory = document.getElementById("extra-memory");
 const extraStorage = document.getElementById("extra-storage-cost");
 const deliveryCharge = document.getElementById("delivery-cost");
 const cuponTotal = document.getElementById("promo-total");
+const apply = document.getElementById("apply");
+const IMacPrice = 1299;
+const promoCode = "stevekaku";
+const discValue = 20;
+// update iMAC price
+function updateImacPrice(IDNAME) {
+  document.getElementById(IDNAME).innerText = IMacPrice;
+}
+updateImacPrice("IMAc-price");
+updateImacPrice("totalCost");
+updateImacPrice("promo-total");
 // updated common function
 function update(idName, productValue) {
   const product = document.getElementById(idName);
@@ -21,9 +32,8 @@ function sum(productValue) {
   const b = Number(document.getElementById("extra-storage-cost").innerText);
   const c = Number(document.getElementById("delivery-cost").innerText);
   const totalCost = (document.getElementById("totalCost").innerText =
-    1299 + a + b + c);
+    IMacPrice + a + b + c);
   cuponTotal.innerText = totalCost;
-  return totalCost;
 }
 //use eventListener common function
 eventCommonFunction("configuration-memory", "click", "extra-memory", 0);
@@ -34,12 +44,28 @@ eventCommonFunction("storage-1tb", "click", "extra-storage-cost", 180);
 eventCommonFunction("free-delivery", "click", "delivery-cost", 0);
 eventCommonFunction("paid-delivery-cost", "click", "delivery-cost", 20);
 // cupon code control
-document.getElementById("apply").addEventListener("click", function () {
-  if (document.getElementById("cupon-field").value === "stevkaku") {
-    const totalAmount = totalCost.innerText;
-    const discAMount = totalAmount / 20;
-    console.log(discAMount);
-    cuponTotal.innerText = totalAmount - discAMount;
-    //alert
-  }
-});
+
+function discControl(idName, eventClick, codeFieldID, discAmountID) {
+  document.getElementById(idName).addEventListener(eventClick, function () {
+    const promoCOde = document.getElementById(codeFieldID);
+    if (promoCOde.value === promoCode) {
+      document.getElementById("success").style.display = "block";
+      document.getElementById("fail").style.display = "none";
+      const totalAmount = totalCost.innerText;
+      const discAMount = (totalAmount * discValue) / 100;
+      cuponTotal.innerText = totalAmount - discAMount;
+      promoCOde.value = "";
+      document.getElementById(discAmountID).innerText =
+        discAMount + " (" + discValue;
+
+      cuponTotal.style.color = "tomato";
+      apply.innerText = "applied";
+    } else {
+      document.getElementById("fail").style.display = "block";
+      document.getElementById("success").style.display = "none";
+      apply.innerText = "failed";
+    }
+  });
+}
+
+discControl("apply", "click", "cupon-field", "disc_amount");
