@@ -1,13 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 /* custom font family */
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
 /* apply font family  */
 body {
   font-family: poppins;
 }
+main {
+  margin-top: 2rem;
+}
 /* contyainer */
 .container {
+  width: 90%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 /* all image size control */
 img {
@@ -15,8 +24,9 @@ img {
 }
 /* div width Control  */
 .with-controlar {
-  width: 50%;
-  line-height: 0.2rem;
+  margin: 0;
+  line-height: 3rem;
+  border-bottom: 1px solid #ddd;
 }
 /* right side of hero section */
 .hero-right-section {
@@ -24,34 +34,106 @@ img {
 }
 /* margin-top */
 .mt-3 {
-  margin-top: 3rem;
-}
-/*  */
-hr {
-  width: 50%;
+  margin-top: 2rem;
 }
 h1 {
   font-size: 2rem;
 }
+h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+h4 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+p {
+  margin-top: 0.7rem;
+}
+#apply {
+  border-radius: 5px;
+}
+/* alert design */
+#success {
+  background-color: yellowgreen;
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}
+#fail {
+  background-color: #ca021c;
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}
+#cupon-field {
+  transition: all 1s ease;
+}
 /* button hover effect and some effective design */
 button {
-  padding: 10px 20px;
+  padding: 10px 14px;
   border: none;
   outline: none;
+  border-radius: 1rem;
+  margin-right: 0.2rem;
+  transition: all 0.5s ease;
 }
 button:focus {
-  outline: 2px solid rgb(66, 61, 60);
+  /* outline: 2px solid rgb(61, 103, 202); */
+  box-shadow: 0 14px 28px rgb(0 0 0 / 32%), 0 10px 10px rgb(0 0 0 / 2%);
+  background-color: rgba(255, 99, 71, 0.349);
+}
+button:hover {
+  cursor: pointer;
 }
 /* input field design */
 input {
   padding: 10px 30px;
   border: 1px solid rgb(163, 157, 157);
 }
+
+#promo-total-amout {
+  color: tomato;
+}
+
 /* media query for webpage responsive
  */
 
 @media only screen and (max-width: 668px) {
   .container {
     flex-wrap: wrap;
+  }
+  button {
+    margin-top: 0.5rem;
+  }
+  img {
+    width: 27rem;
+  }
+  .with-controlar {
+    width: 100%;
+  }
+  .hero-right-section {
+    margin-left: 0rem;
+  }
+  #prmo-section {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #prmo-section input {
+    width: 95%;
+    text-align: center;
+    padding: 10px;
+  }
+  #prmo-section button {
+    width: 100%;
+    text-align: center;
+  }
+  #success,
+  #fail {
+    margin-top: 2rem;
   }
 }
